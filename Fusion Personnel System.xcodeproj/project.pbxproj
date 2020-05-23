@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001CBB12474534B00C5E051 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBB02474534B00C5E051 /* main.cpp */; };
+		1001CBB92474536600C5E051 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBB72474536600C5E051 /* Account.cpp */; };
+		1001CBBC2474537200C5E051 /* Teacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBBA2474537200C5E051 /* Teacher.cpp */; };
+		1001CBBF2474537F00C5E051 /* Admin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBBD2474537F00C5E051 /* Admin.cpp */; };
+		1001CBC22474539400C5E051 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC02474539400C5E051 /* Student.cpp */; };
+		1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC32474641E00C5E051 /* I-Printable.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1001CBAB2474534A00C5E051 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1001CBAD2474534B00C5E051 /* Fusion Personnel System */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Fusion Personnel System"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1001CBB02474534B00C5E051 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1001CBB72474536600C5E051 /* Account.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
+		1001CBB82474536600C5E051 /* Account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Account.hpp; sourceTree = "<group>"; };
+		1001CBBA2474537200C5E051 /* Teacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Teacher.cpp; sourceTree = "<group>"; };
+		1001CBBB2474537200C5E051 /* Teacher.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Teacher.hpp; sourceTree = "<group>"; };
+		1001CBBD2474537F00C5E051 /* Admin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Admin.cpp; sourceTree = "<group>"; };
+		1001CBBE2474537F00C5E051 /* Admin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Admin.hpp; sourceTree = "<group>"; };
+		1001CBC02474539400C5E051 /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		1001CBC12474539400C5E051 /* Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
+		1001CBC32474641E00C5E051 /* I-Printable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "I-Printable.cpp"; sourceTree = "<group>"; };
+		1001CBC42474641E00C5E051 /* I-Printable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "I-Printable.hpp"; sourceTree = "<group>"; };
+		1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClasses.txt; sourceTree = "<group>"; };
+		1018E4A32478A23400B2C0C0 /* Teachers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachers.txt; sourceTree = "<group>"; };
+		1018E4A42478A24300B2C0C0 /* Students.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Students.txt; sourceTree = "<group>"; };
+		1018E4A52478A27600B2C0C0 /* Administrators.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Administrators.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1001CBAA2474534A00C5E051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1001CBA42474534A00C5E051 = {
+			isa = PBXGroup;
+			children = (
+				1001CBAF2474534B00C5E051 /* Fusion Personnel System */,
+				1001CBAE2474534B00C5E051 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1001CBAE2474534B00C5E051 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1001CBAD2474534B00C5E051 /* Fusion Personnel System */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1001CBAF2474534B00C5E051 /* Fusion Personnel System */ = {
+			isa = PBXGroup;
+			children = (
+				1001CBB02474534B00C5E051 /* main.cpp */,
+				1001CBC32474641E00C5E051 /* I-Printable.cpp */,
+				1001CBC42474641E00C5E051 /* I-Printable.hpp */,
+				1001CBB72474536600C5E051 /* Account.cpp */,
+				1001CBB82474536600C5E051 /* Account.hpp */,
+				1001CBBA2474537200C5E051 /* Teacher.cpp */,
+				1001CBBB2474537200C5E051 /* Teacher.hpp */,
+				1001CBBD2474537F00C5E051 /* Admin.cpp */,
+				1001CBBE2474537F00C5E051 /* Admin.hpp */,
+				1001CBC02474539400C5E051 /* Student.cpp */,
+				1001CBC12474539400C5E051 /* Student.hpp */,
+				1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */,
+				1018E4A32478A23400B2C0C0 /* Teachers.txt */,
+				1018E4A42478A24300B2C0C0 /* Students.txt */,
+				1018E4A52478A27600B2C0C0 /* Administrators.txt */,
+			);
+			path = "Fusion Personnel System";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1001CBAC2474534A00C5E051 /* Fusion Personnel System */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1001CBB42474534B00C5E051 /* Build configuration list for PBXNativeTarget "Fusion Personnel System" */;
+			buildPhases = (
+				1001CBA92474534A00C5E051 /* Sources */,
+				1001CBAA2474534A00C5E051 /* Frameworks */,
+				1001CBAB2474534A00C5E051 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fusion Personnel System";
+			productName = "Fusion Personnel System";
+			productReference = 1001CBAD2474534B00C5E051 /* Fusion Personnel System */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1001CBA52474534A00C5E051 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Joshua Pare";
+				TargetAttributes = {
+					1001CBAC2474534A00C5E051 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1001CBA82474534A00C5E051 /* Build configuration list for PBXProject "Fusion Personnel System" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1001CBA42474534A00C5E051;
+			productRefGroup = 1001CBAE2474534B00C5E051 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1001CBAC2474534A00C5E051 /* Fusion Personnel System */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1001CBA92474534A00C5E051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001CBB12474534B00C5E051 /* main.cpp in Sources */,
+				1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */,
+				1001CBB92474536600C5E051 /* Account.cpp in Sources */,
+				1001CBBC2474537200C5E051 /* Teacher.cpp in Sources */,
+				1001CBC22474539400C5E051 /* Student.cpp in Sources */,
+				1001CBBF2474537F00C5E051 /* Admin.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1001CBB22474534B00C5E051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1001CBB32474534B00C5E051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1001CBB52474534B00C5E051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1001CBB62474534B00C5E051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1001CBA82474534A00C5E051 /* Build configuration list for PBXProject "Fusion Personnel System" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1001CBB22474534B00C5E051 /* Debug */,
+				1001CBB32474534B00C5E051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1001CBB42474534B00C5E051 /* Build configuration list for PBXNativeTarget "Fusion Personnel System" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1001CBB52474534B00C5E051 /* Debug */,
+				1001CBB62474534B00C5E051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1001CBA52474534A00C5E051 /* Project object */;
+}
