@@ -22,6 +22,8 @@ protected:
     
 public:
     virtual void method () override;
+    void get_info ();
+    
     Teacher() {}
     Teacher(std::string department_entry, std::string subject_entry, std::string first_name_entry, std::string last_name_entry, int age_entry);
     virtual void print(std::ostream &os) const override;
