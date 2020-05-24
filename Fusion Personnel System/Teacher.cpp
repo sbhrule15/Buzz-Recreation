@@ -23,3 +23,5 @@ Teacher::Teacher(std::string department_entry, std::string subject_entry, std::s
     std::cout << "Creating Teacher" << std::endl;
 }
 
+// Method Definitions:
+    

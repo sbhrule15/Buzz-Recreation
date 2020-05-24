@@ -31,6 +31,33 @@ public:
     virtual ~Account() = default;
     virtual void print(std::ostream &os) const override;
     
+    // Setter and Getters
+    
+    void set_first_name (std::string fn_entry) {
+        first_name = fn_entry;
+    }
+    
+    std::string get_first_name () {
+        return first_name;
+    }
+    
+    void set_last_name (std::string ln_entry) {
+        last_name = ln_entry;
+    }
+    
+    std::string get_last_name () {
+        return last_name;
+    }
+    
+    void set_age (int a_entry) {
+        age = a_entry;
+    }
+    
+    int get_age () {
+       return age;
+    }
+    
+    
     virtual void method () = 0;
     
 };

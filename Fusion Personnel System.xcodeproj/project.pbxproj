@@ -40,10 +40,14 @@
 		1001CBC12474539400C5E051 /* Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
 		1001CBC32474641E00C5E051 /* I-Printable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "I-Printable.cpp"; sourceTree = "<group>"; };
 		1001CBC42474641E00C5E051 /* I-Printable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "I-Printable.hpp"; sourceTree = "<group>"; };
+		100AC825247A10E200090850 /* Students.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Students.txt; sourceTree = "<group>"; };
+		100AC826247A145600090850 /* Teachersout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachersout.txt; sourceTree = "<group>"; };
+		100AC827247A146C00090850 /* Studentsout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Studentsout.txt; sourceTree = "<group>"; };
+		100AC828247A148800090850 /* Administratorsout */ = {isa = PBXFileReference; lastKnownFileType = text; path = Administratorsout; sourceTree = "<group>"; };
+		100AC829247A14AE00090850 /* OfferedClassesout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClassesout.txt; sourceTree = "<group>"; };
 		1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClasses.txt; sourceTree = "<group>"; };
-		1018E4A32478A23400B2C0C0 /* Teachers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachers.txt; sourceTree = "<group>"; };
-		1018E4A42478A24300B2C0C0 /* Students.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Students.txt; sourceTree = "<group>"; };
 		1018E4A52478A27600B2C0C0 /* Administrators.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Administrators.txt; sourceTree = "<group>"; };
+		10D2B92C247A19FD0019AE0F /* Teachers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachers.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +91,14 @@
 				1001CBBE2474537F00C5E051 /* Admin.hpp */,
 				1001CBC02474539400C5E051 /* Student.cpp */,
 				1001CBC12474539400C5E051 /* Student.hpp */,
+				10D2B92C247A19FD0019AE0F /* Teachers.txt */,
 				1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */,
-				1018E4A32478A23400B2C0C0 /* Teachers.txt */,
-				1018E4A42478A24300B2C0C0 /* Students.txt */,
+				100AC825247A10E200090850 /* Students.txt */,
 				1018E4A52478A27600B2C0C0 /* Administrators.txt */,
+				100AC826247A145600090850 /* Teachersout.txt */,
+				100AC827247A146C00090850 /* Studentsout.txt */,
+				100AC828247A148800090850 /* Administratorsout */,
+				100AC829247A14AE00090850 /* OfferedClassesout.txt */,
 			);
 			path = "Fusion Personnel System";
 			sourceTree = "<group>";
@@ -121,7 +129,7 @@
 		1001CBA52474534A00C5E051 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Joshua Pare";
 				TargetAttributes = {
 					1001CBAC2474534A00C5E051 = {
@@ -276,6 +284,7 @@
 		1001CBB52474534B00C5E051 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -284,6 +293,7 @@
 		1001CBB62474534B00C5E051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
