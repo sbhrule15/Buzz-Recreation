@@ -22,6 +22,7 @@ protected:
     
 public:
     virtual void method () override;
+    Teacher create_teacher();
     
     void get_info ();
     std::string get_department(){ return department;};

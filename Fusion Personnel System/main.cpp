@@ -12,6 +12,7 @@
 #include <memory>
 #include <fstream>
 #include <iterator>
+#include "Menus.hpp"
 #include "Account.hpp"
 #include "Student.hpp"
 #include "Teacher.hpp"
@@ -28,78 +29,73 @@ std::ofstream student_out ("Studentsout.txt", std::ios::app);
 std::ofstream admin_out ("Administratorsout.txt", std::ios::app);
 std::ofstream classes_out ("OfferedClassesout.txt", std::ios::app);
 
-
+// System Vectors
 
 std::vector<std::shared_ptr<Teacher>> teachers {};
 std::vector<std::shared_ptr<Student>> students {};
 std::vector<std::shared_ptr<Admin>> administrators {};
 
+Teacher teachermethods{};
+// Admin adminmethods{};       //HAVE NOT YET WRITTEN
+// Student studentmethods{};   //HAVE NOT YET WRITTEN
 
 
-// Menu functions:
+// Load function:
 
-int main_menu ();
-void login();
 void load_accounts();
 
-// Create and Destroy Functions
+// Create and Destroy Functions -----ALLOCATE OUTSIDE MAIN EVENTUALLY--------
 
-Teacher create_teacher();
 void output_teacher();
 
 // Main
 
 int main () {
+    Menus menu{};
+    Teacher teachermethods{};
+    int selection{};
     
-    login();
+    menu.login();
     load_accounts();
+   
+    do {
+        selection = menu.main_menu();
+        if (selection==1) {
+            int selectionsub1{};
+            selectionsub1 = menu.student_main_menu();
+        }
+        if (selection==2) {
+            int selectionsub1{};
+            selectionsub1 = menu.teacher_main_menu();
+        }
+        if (selection==3) {
+            int selectionsub1{};
+            selectionsub1 = menu.admin_main_menu();
+        }
+        if (selection==4) {
+    //        int selectionsub1{};
+    //        selectionsub1 = menu.enrollment_main_menu{};
+        }
+        if (selection==5) {
+            std::cout << "Thank you for using the Buzz LMS system, version c++.";
+        }
+        } while (selection!=5);
     
     output_teacher();
+    
+    
+    // Closing files
     
     teacher_ref.close();
     student_ref.close();
     admin_ref.close();
     classes_ref.close();
+    teacher_out.close();
+    student_out.close();
+    admin_out.close();
+    classes_out.close();
     
     return 0;
-}
-
-
-int main_menu () {
-    
-    int menu_selection{};
-    
-    std::cout << "==================MAIN MENU===================" << std::endl;
-    
-    return menu_selection;
-    
-}
-
-void login() {
-    std::string usernameentry{};
-    std::string passwordentry{};
-    std::string username{"JPare"};
-    std::string password{"Aida2019$"};
-    bool access{false};
-
-    do {
-        std::cout << "====================LOGIN====================" << std::endl;
-        std::cout << "\nPlease enter your username and password:\n" << std::endl;
-
-        std::cout << "\tUsername: ";
-        getline(std::cin, usernameentry);
-
-        std::cout << "\tPassword: ";
-        getline(std::cin, passwordentry);
-
-        if (username == usernameentry && password == passwordentry) {
-            std::cout << "Welcome " << usernameentry << "." << std::endl;
-            access = true;
-        } else {
-            std::cerr << "Credentials invalid. Please try again.";
-            access =  false;
-            }
-    } while (access == false);
 }
 
 void load_accounts () {
@@ -107,28 +103,28 @@ void load_accounts () {
     // Load Documents
 
     if (teacher_ref) {
-        std::cout << "Teacher Accounts Loaded." << std::endl;
+        std::cout << "Teacher Account File Linked." << std::endl;
     } else {
         std::cerr << "Error Loading Teacher Accounts";
     }
     if (student_ref) {
-        std::cout << "Student Accounts Loaded." << std::endl;
+        std::cout << "Student Account File Linked." << std::endl;
     } else {
         std::cerr << "Error Loading Student Accounts";
     }
     if (admin_ref) {
-        std::cout << "Administrator Accounts Loaded." << std::endl;
+        std::cout << "Administrator Account File Linked." << std::endl;
     } else {
         std::cerr << "Error Loading Administrator Accounts";
     }
     if (classes_ref) {
-        std::cout << "Classes Template Loaded." << std::endl;
+        std::cout << "Classes Template File Linked." << std::endl;
     } else {
         std::cerr << "Error Loading Classes Template";
     }
 
     // Load Teachers into Vector
-
+    std::cout << "Loading Teacher Accounts...";
     while (!teacher_ref.eof()) {
         std::string tempfirst{};
         std::string templast{};
@@ -140,11 +136,11 @@ void load_accounts () {
         teachers.push_back(std::make_shared<Teacher>(tempdep, tempsubject, tempfirst, templast, tempage));
     }
 
-    std::cout << "Teacher Accounts Copied to Main" << std::endl;
+    std::cout << "Teacher Accounts Loaded" << std::endl;
 
 
     // Load Students into Vector
-
+    std::cout << "Loading Student Accounts...";
     while (!student_ref.eof()) {
         std::string tempfirst{};
         std::string templast{};
@@ -155,10 +151,10 @@ void load_accounts () {
         students.push_back(std::make_shared<Student>(tempgradelevel, tempfirst, templast, tempage));
     }
 
-    std::cout << "Student Accounts Copied to Main" << std::endl;
+    std::cout << "Student Accounts Loaded" << std::endl;
 
     // Load Administrator into Vector
-
+    std::cout << "Loading Administrator Accounts...";
     while (!admin_ref.eof()) {
         std::string tempfirst{};
         std::string templast{};
@@ -169,46 +165,13 @@ void load_accounts () {
         administrators.push_back(std::make_shared<Admin>(temptitle, tempfirst, templast, tempage));
     }
 
-    std::cout << "Adminstrator Accounts Copied to Main" << std::endl;
+    std::cout << "Adminstrator Accounts Loaded" << std::endl;
 
-}
-
-Teacher create_teacher () {
-    std::string tempfirst{};
-    std::string templast{};
-    int tempage{};
-    std::string tempdep{};
-    std::string tempsubject{};
-        
-    std::cout << "\n==========CREATE TEACHER==========\n";
-    std::cout << "Please enter the following information about the teacher: ";
-    
-    std::cout << "\n\tFirst Name: ";
-    getline(std::cin, tempfirst);
-    
-    std::cout << "\tLast Name: ";
-    getline(std::cin, templast);
-    
-    std::cout << "\tAge: ";
-    std::cin >> tempage;
-    
-    std::cout << "\tDepartment (Humanities, STEM, English, or Electives): ";
-    std::cin.ignore();
-    getline(std::cin, tempdep);
-    
-    std::cout << "\tSubject Area: ";
-    getline(std::cin, tempsubject);
-    
-    std::cout << "\nCreating Teacher...";
-    Teacher ptr {tempdep, tempsubject, tempfirst, templast, tempage};
-    
-    return ptr;
-    
 }
 
 void output_teacher() {
 
-std::shared_ptr<Teacher> temp = std::make_shared<Teacher>(create_teacher());
+    std::shared_ptr<Teacher> temp = std::make_shared<Teacher>(teachermethods.create_teacher());
 
 teachers.insert(teachers.end(),temp);
 
@@ -221,18 +184,4 @@ teachers.insert(teachers.end(),temp);
     teacher_out << temp->get_subject();
     teacher_out << "\n";
 }
-
-
-// Old Code
-    
-//    std::unique_ptr<Account> JP = std::make_unique<Teacher>("Electives", "Music", "Joshua", "Pare", 24);
-//    std::unique_ptr<Account> JY = std::make_unique<Teacher>("STEM", "Science", "Justine", "Yoon", 30);
-//    std::unique_ptr<Account> CD = std::make_unique<Teacher>("STEM", "Math", "Costanza", "Davis", 23);
-//    std::unique_ptr<Account> DG = std::make_unique<Teacher>("Humanities", "English", "Danielle", "Greenburg", 32);
-//
-//    std::cout << *JP << std::endl;
-//    std::cout << *JY << std::endl;
-//    std::cout << *CD << std::endl;
-//    std::cout << *DG << std::endl;
-    
 

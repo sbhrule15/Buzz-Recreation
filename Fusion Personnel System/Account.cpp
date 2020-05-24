@@ -10,7 +10,7 @@
 
 Account::Account(std::string first, std::string last, int age_of)
 : first_name(first), last_name(last), age(age_of) {
-    std::cout << "Creating Account" << std::endl;
+    std::cout << ".";
 }
 
 void Account::print(std::ostream &os) const {

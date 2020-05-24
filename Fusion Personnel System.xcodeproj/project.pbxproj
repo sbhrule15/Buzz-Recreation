@@ -13,6 +13,7 @@
 		1001CBBF2474537F00C5E051 /* Admin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBBD2474537F00C5E051 /* Admin.cpp */; };
 		1001CBC22474539400C5E051 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC02474539400C5E051 /* Student.cpp */; };
 		1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC32474641E00C5E051 /* I-Printable.cpp */; };
+		10D2B945247A30B40019AE0F /* Menus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10D2B943247A30B40019AE0F /* Menus.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClasses.txt; sourceTree = "<group>"; };
 		1018E4A52478A27600B2C0C0 /* Administrators.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Administrators.txt; sourceTree = "<group>"; };
 		10D2B92C247A19FD0019AE0F /* Teachers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachers.txt; sourceTree = "<group>"; };
+		10D2B943247A30B40019AE0F /* Menus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menus.cpp; sourceTree = "<group>"; };
+		10D2B944247A30B40019AE0F /* Menus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menus.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				1001CBB02474534B00C5E051 /* main.cpp */,
+				10D2B943247A30B40019AE0F /* Menus.cpp */,
+				10D2B944247A30B40019AE0F /* Menus.hpp */,
 				1001CBC32474641E00C5E051 /* I-Printable.cpp */,
 				1001CBC42474641E00C5E051 /* I-Printable.hpp */,
 				1001CBB72474536600C5E051 /* Account.cpp */,
@@ -164,6 +169,7 @@
 				1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */,
 				1001CBB92474536600C5E051 /* Account.cpp in Sources */,
 				1001CBBC2474537200C5E051 /* Teacher.cpp in Sources */,
+				10D2B945247A30B40019AE0F /* Menus.cpp in Sources */,
 				1001CBC22474539400C5E051 /* Student.cpp in Sources */,
 				1001CBBF2474537F00C5E051 /* Admin.cpp in Sources */,
 			);
