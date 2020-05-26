@@ -13,6 +13,7 @@
 		1001CBBF2474537F00C5E051 /* Admin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBBD2474537F00C5E051 /* Admin.cpp */; };
 		1001CBC22474539400C5E051 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC02474539400C5E051 /* Student.cpp */; };
 		1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1001CBC32474641E00C5E051 /* I-Printable.cpp */; };
+		109DB6D3247C4394005D8F94 /* Schedule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 109DB6D1247C4394005D8F94 /* Schedule.cpp */; };
 		10D2B945247A30B40019AE0F /* Menus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10D2B943247A30B40019AE0F /* Menus.cpp */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		100AC829247A14AE00090850 /* OfferedClassesout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClassesout.txt; sourceTree = "<group>"; };
 		1018E4A22478A22000B2C0C0 /* OfferedClasses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OfferedClasses.txt; sourceTree = "<group>"; };
 		1018E4A52478A27600B2C0C0 /* Administrators.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Administrators.txt; sourceTree = "<group>"; };
+		109DB6D1247C4394005D8F94 /* Schedule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Schedule.cpp; sourceTree = "<group>"; };
+		109DB6D2247C4394005D8F94 /* Schedule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Schedule.hpp; sourceTree = "<group>"; };
 		10D2B92C247A19FD0019AE0F /* Teachers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teachers.txt; sourceTree = "<group>"; };
 		10D2B943247A30B40019AE0F /* Menus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menus.cpp; sourceTree = "<group>"; };
 		10D2B944247A30B40019AE0F /* Menus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menus.hpp; sourceTree = "<group>"; };
@@ -104,8 +107,18 @@
 				100AC827247A146C00090850 /* Studentsout.txt */,
 				100AC828247A148800090850 /* Administratorsout */,
 				100AC829247A14AE00090850 /* OfferedClassesout.txt */,
+				109DB6D0247C4357005D8F94 /* New Group */,
 			);
 			path = "Fusion Personnel System";
+			sourceTree = "<group>";
+		};
+		109DB6D0247C4357005D8F94 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				109DB6D1247C4394005D8F94 /* Schedule.cpp */,
+				109DB6D2247C4394005D8F94 /* Schedule.hpp */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +180,7 @@
 			files = (
 				1001CBB12474534B00C5E051 /* main.cpp in Sources */,
 				1001CBC52474641E00C5E051 /* I-Printable.cpp in Sources */,
+				109DB6D3247C4394005D8F94 /* Schedule.cpp in Sources */,
 				1001CBB92474536600C5E051 /* Account.cpp in Sources */,
 				1001CBBC2474537200C5E051 /* Teacher.cpp in Sources */,
 				10D2B945247A30B40019AE0F /* Menus.cpp in Sources */,
