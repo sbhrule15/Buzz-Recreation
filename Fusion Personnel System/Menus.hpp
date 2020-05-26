@@ -19,6 +19,8 @@ public:
     
     int existence = 1;
     
+    void header(std::string);
+    
     // Login Menu
     void login();
     

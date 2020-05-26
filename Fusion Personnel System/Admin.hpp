@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "Account.hpp"
+#include "Administrators.txt"
 
 class Admin : public Account {
     private:

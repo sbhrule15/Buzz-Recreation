@@ -16,7 +16,7 @@
 
 class I_Printable {
 public:
-    friend std::ostream &operator<<(std::ostream &os, const I_Printable &printable);
+   // friend std::ostream &operator<<(std::ostream &os, const I_Printable &printable);
     
     
     virtual void print(std::ostream &os) const = 0;

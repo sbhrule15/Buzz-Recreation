@@ -9,7 +9,7 @@
 #include "Account.hpp"
 
 Account::Account(std::string first, std::string last, int age_of)
-: first_name(first), last_name(last), age(age_of) {
+: first_name(first), last_name(last), age(age_of), sch(first,last)  {
     std::cout << ".";
 }
 

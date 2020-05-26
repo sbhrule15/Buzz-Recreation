@@ -9,21 +9,28 @@
 #ifndef Teacher_hpp
 #define Teacher_hpp
 
-#include <stdio.h>
+#include <iostream>
 #include "Account.hpp"
 #include <string>
 
 class Teacher : public Account {
+    
 private:
     
 protected:
     std::string department {"None"};
     std::string subject {"None"};
     
+    
 public:
     virtual void method () override;
-    Teacher create_teacher();
     
+    friend std::ostream &operator<<(std::ostream &os, const Teacher &printable) {
+        os << printable.last_name << " " << printable.first_name << "\nDepartment: " << printable.department << "\nSubject: " << printable.subject << std::endl;
+        return os;
+    }
+    
+    Teacher create_teacher();
     void get_info ();
     std::string get_department(){ return department;};
     std::string get_subject(){ return subject;};

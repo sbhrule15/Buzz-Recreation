@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
 #include <memory>
@@ -17,6 +18,7 @@
 #include "Student.hpp"
 #include "Teacher.hpp"
 #include "Admin.hpp"
+#include "Scheduler.hpp"
 
 // File Streams
 
@@ -47,13 +49,18 @@ void load_accounts();
 // Create and Destroy Functions -----ALLOCATE OUTSIDE MAIN EVENTUALLY--------
 
 void output_teacher();
+void find_teacher();
 
 // Main
 
 int main () {
+    
+    // FUNCTION OBJECTS
     Menus menu{};
     Teacher teachermethods{};
     int selection{};
+    Schedule f {"Function", "Function"};
+    // FUNCTION OBJECTS
     
     menu.login();
     load_accounts();
@@ -67,15 +74,177 @@ int main () {
         if (selection==2) {
             int selectionsub1{};
             selectionsub1 = menu.teacher_main_menu();
+            
+            if (selectionsub1 == 1) {
+                menu.header("FIND TEACHER");
+                
+                find_teacher();
+            }
+            if (selectionsub1 == 2) {
+                menu.header("ADD CLASS");
+                
+                f.add_class();
+            }
+            if (selectionsub1 == 3) {
+                menu.header("LIST CURRENT TEACHERS");
+                
+                for (size_t t=0; t < teachers.size(); t++) {
+                    std::cout << *teachers[t] << std::endl;
+                }
+            }
+            if (selectionsub1 == 4) {
+                menu.header("PRINT TEACHER SCHEDULE");
+                
+                f.print_schedule();
+            }
+            if (selectionsub1 == 5) {
+                menu.header("QUIT");
+            }
         }
         if (selection==3) {
             int selectionsub1{};
             selectionsub1 = menu.admin_main_menu();
         }
         if (selection==4) {
-    //        int selectionsub1{};
-    //        selectionsub1 = menu.enrollment_main_menu{};
+            menu.header("SMART SCHEDULER");
+            
+            std::cin.ignore();
+            std::string namebuff{};
+            std::string sfirstbuff{};
+            std::string slastbuff{};
+            std::string tfirstbuff{};
+            std::string tlastbuff{};
+               
+            std::cout << "Welcome to the Smart Scheduler!\n\nPlease enter the teacher to enroll: ";
+            getline(std::cin, namebuff);
+            std::istringstream ss(namebuff);
+            ss >> tfirstbuff;
+            ss >> tlastbuff;
+               
+            std::unique_ptr<Schedule> teacher = std::make_unique<Schedule>(tfirstbuff, tlastbuff);
+            std::cout << std::endl;
+            teacher->load_schedule();
+               
+            std::cout << "\nPlease enter the student to enroll: ";
+            getline(std::cin, namebuff);
+            std::istringstream ss2(namebuff);
+            ss2 >> sfirstbuff;
+            ss2 >> slastbuff;
+               
+            std::unique_ptr<Schedule> student = std::make_unique<Schedule>(sfirstbuff, slastbuff);
+            std::cout << std::endl;
+            student->load_schedule();
+            
+            std::unique_ptr<Schedule> smart_scheduler = std::make_unique<Schedule>("SCHEDULER", "SMART");
+            
+            int d = 0;
+            while (d<5) {
+                for (size_t t=0; t < 11; t++) {
+                    if (student->time_table[d][t] == "EMPTY" && teacher->time_table[d][t] == "EMPTY"){
+                        smart_scheduler->time_table[d][t] = "AVAILABLE";
+                    }
+                    else
+                        smart_scheduler->time_table[d][t] = "BUSY";
+                }
+            d++;
+            }
+            
+            smart_scheduler->get_schedule();
+            
+            std::string time{};
+            std::string day{};
+            std::string classtitle{};
+            int array_day{};
+            int array_time{};
+            
+             do {
+                 std::cout << "\nPlease enter the day you would like to add the class:";
+                 getline(std::cin, day);
+                     if (day != "Monday" && day != "Tuesday" && day != "Wednesday" && day != "Thursday" && day!= "Friday") {
+                         std::cerr << "Invalid Day. Please Try Again.\n" << std::endl;
+                     }
+             } while (day != "Monday" && day != "Tuesday" && day != "Wednesday" && day != "Thursday" && day!= "Friday");
+             
+             do {
+                 std::cout << "\nPlease enter the time you would like to add the class:";
+                 getline(std::cin, time);
+                     if (time != "7:30" && time != "8:30" && time != "9:30" && time != "10:30" && time != "11:30" && time != "12:30" && time != "1:30" && time != "2:30" && time != "3:30" && time != "4:30" && time != "5:30") {
+                         std::cerr << "Invalid Time. Please Try Again.\n" << std::endl;
+                     }
+             } while (time != "7:30" && time != "8:30" && time != "9:30" && time != "10:30" && time != "11:30" && time != "12:30" && time != "1:30" && time != "2:30" && time != "3:30" && time != "4:30" && time != "5:30");
+             
+             std::cout << "\nPlease enter the name of the class you would like to schedule: ";
+             getline(std::cin, classtitle);
+             
+            array_day = f.day_conversion(day);
+            array_time = f.time_conversion(time);
+            
+            if (smart_scheduler->time_table[array_day][array_time] == "AVAILABLE") {
+             
+                 std::string file_name = (sfirstbuff+slastbuff+"Schedule.txt");
+                 std::vector<std::string> stempstore{};
+                 
+                 std::ifstream in_file;
+                 in_file.open(file_name);
+                 
+                 while (!in_file.eof()) {
+                     std::string lineread{};
+                     getline(in_file, lineread);
+                     stempstore.push_back(lineread);
+                 }
+                 in_file.close();
+                 
+                 // REPLACING WITH CLASS IN VECTOR
+                 
+                 int vectorlocation{};
+                 vectorlocation = (array_day*11) + array_time;
+                 
+                 stempstore.at(vectorlocation) = classtitle;
+                 
+                 std::ofstream out_file;
+                 out_file.open(file_name);
+                 
+                 for (size_t t=0; t<stempstore.size(); t++) {
+                     out_file << stempstore.at(t) << "\n";
+                 }
+                 out_file.close();
+                 
+                 std::cout << "\nClass Added to Student Schedule" << std::endl;
+                 
+                 //Teacher
+                 
+                 file_name = (tfirstbuff+tlastbuff+"Schedule.txt");
+                 std::vector<std::string> ttempstore{};
+                
+                 in_file.open(file_name);
+                 
+                 while (!in_file.eof()) {
+                     std::string lineread{};
+                     getline(in_file, lineread);
+                     ttempstore.push_back(lineread);
+                 }
+                 in_file.close();
+                 
+                 // REPLACING WITH CLASS IN VECTOR
+                 
+                 int tvectorlocation{};
+                 vectorlocation = (array_day*11) + array_time;
+                 
+                 ttempstore.at(tvectorlocation) = classtitle;
+                 
+                 out_file.open(file_name);
+                 
+                 for (size_t t=0; t<ttempstore.size(); t++) {
+                     out_file << ttempstore.at(t) << "\n";
+                 }
+                 out_file.close();
+                 
+                 std::cout << "Class Added to Teacher Schedule" << std::endl;
+                 
+            } else
+                std::cerr << "Invalid Time Slot. Please relaunch Smart Scheduler.\n\n";
         }
+        
         if (selection==5) {
             std::cout << "Thank you for using the Buzz LMS system, version c++.";
         }
@@ -169,6 +338,7 @@ void load_accounts () {
 
 }
 
+
 void output_teacher() {
 
     std::shared_ptr<Teacher> temp = std::make_shared<Teacher>(teachermethods.create_teacher());
@@ -184,4 +354,23 @@ teachers.insert(teachers.end(),temp);
     teacher_out << temp->get_subject();
     teacher_out << "\n";
 }
+
+void find_teacher() {
+        std::string lnentry{};
+       std::cout << "\nPlease enter the last name of the user you would like to find: ";
+       std::cin.ignore();
+       getline(std::cin, lnentry);
+       std::cout << std::endl;
+       
+       bool user_found{false};
+       for (size_t t=0; t < teachers.size(); t++) {
+           if (teachers[t]->get_last_name() == lnentry) {
+               std::cout << *teachers[t] << std::endl;
+               user_found = true;
+           }
+       }
+       if (!user_found) {
+           std::cout << "No user found with that last name.\n" << std::endl;
+       }
+    }
 

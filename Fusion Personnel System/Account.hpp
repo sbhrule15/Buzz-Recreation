@@ -14,6 +14,7 @@
 #include <iostream>
 #include <string>
 #include "I-Printable.hpp"
+#include "Scheduler.hpp"
 
 class Account : public I_Printable {
 
@@ -22,6 +23,7 @@ protected:
     std::string first_name {"First"};
     std::string last_name {"Last"};
     int age {1};
+    Schedule sch {first_name, last_name};
     
 public:
     // Constructor/Destructor
